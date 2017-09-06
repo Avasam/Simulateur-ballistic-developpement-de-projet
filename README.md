@@ -33,3 +33,5 @@ Acteur du système : L’utilisateur du simulateur.
 	- Faire la physique pour les tire de canon, catapultre ballistes
 	- Faire la physique pour le vent
 	- Faire le codage pour choisir la direction du vent
+
+![Diagramme de classes](https://raw.githubusercontent.com/Avasam/Simulateur-ballistic-developpement-de-projet/master/Documentation/Diagramme de classes.png)
