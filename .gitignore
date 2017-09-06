@@ -127,7 +127,8 @@ ENV/
 
 # Visual Paradigm
 *.bak*
-*.vpp.*
+*.vpp*
+!*.vpp
 
 # PyCharm
 /.idea/workspace.xml
