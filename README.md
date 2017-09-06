@@ -8,6 +8,17 @@ Le projet consiste à créer une application pour effectuer des tests ballistiqu
 et de trajectoire de projectiles avec diffeérente variables et paramètres. Le projet
 sera réalisé en C# à l'aide du moteur de jeu/physique unity.
 
+L’utilisateur sera placé dans une application de simulation de tirs balistiques 
+et pourra choisir différentes options face à l’environnement tel que la force et 
+l’orientation du vent, la texture du terrain. Il pourra choisir entre différentes 
+options de machines telle que la catapulte, le canon, le trébuchet et la baliste. 
+L’utilisateur pourra déterminer l’angle et la direction du tir pour chaque simulation. 
+Plusieurs types de terrain seront également disponibles. Tous les changements d’options 
+se feront à partir d’un menu et de l’interface utilisateur. 
+
+Acteur du système : L’utilisateur du simulateur.
+
+
 Étape du projet :
 	DOCUMENTATION
 	- Cas d'utilisation
