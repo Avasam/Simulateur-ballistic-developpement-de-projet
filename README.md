@@ -35,4 +35,3 @@ Acteur du système : L’utilisateur du simulateur.
 	- Faire le codage pour choisir la direction du vent
 
 ![Diagramme de classes](https://raw.githubusercontent.com/Avasam/Simulateur-ballistic-developpement-de-projet/master/Documentation/Diagramme_de_classes.png)
-![usecase](https://raw.githubusercontent.com/Avasam/Simulateur-ballistic-developpement-de-projet/master/Documentation/usecase_ballistique.png)
