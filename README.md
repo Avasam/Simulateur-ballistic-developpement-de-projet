@@ -7,10 +7,10 @@ La vision du projet consiste en une application pour simuler des tirs sous diff�
 
 Le projet sera réalisé à l'aide de Unity version 5.6.x qui est reconnu pour son moteur de physique intégré, dynamique et polyvalent. Le déploiement se fera sur Windows 10 et Mac OS 10.13 (High Sierra).
 
-[Cycle de développement et Rapport d'analyse](https://docs.google.com/document/d/1KkV5PzfKP5J1mMFA_SUoL8Q6cWs6PHw5FupHfbu4PL4/edit?usp=sharing)
+Cycle de développement: [Rapport d'analyse (GDoc)](https://docs.google.com/document/d/1KkV5PzfKP5J1mMFA_SUoL8Q6cWs6PHw5FupHfbu4PL4/edit?usp=sharing)
 
 ## Modèles
-[Glossaire](Documentation/Glossaire.md)
+**[Glossaire](Documentation/Glossaire.md)**
 #### Cas d'utilisation
 Dans le cas du programme de tests balistiques, l’acteur principal est l’utilisateur: c’est lui qui décidera des paramètres.  
 
