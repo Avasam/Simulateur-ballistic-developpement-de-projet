@@ -10,11 +10,11 @@ Le projet sera réalisé à l'aide de Unity version 5.6.x qui est reconnu pour s
 [Cycle de développement et Rapport d'analyse](https://docs.google.com/document/d/1KkV5PzfKP5J1mMFA_SUoL8Q6cWs6PHw5FupHfbu4PL4/edit?usp=sharing)
 
 ## Modèles
-[Glossaire](https://raw.githubusercontent.com/Avasam/Simulateur-ballistic-developpement-de-projet/master/Documentation/Glossaire.md)
+[Glossaire](Documentation/Glossaire.md)
 #### Cas d'utilisation
 Dans le cas du programme de tests balistiques, l’acteur principal est l’utilisateur: c’est lui qui décidera des paramètres.  
 
 Ces paramètres consistent du terrain: terre, eau, sable, roche; De l’engin de siège tel qu’une catapulte, un trébuchet, une baliste et un canon; Du type de projectile: les flèches, les boulets et les chevrotines; De l’angle de tir ainsi que l'élévation de l’arme. Toutes ces options affectent la trajectoire des projectiles. Finalement, une option pour visualiser l’arc de tir est également disponible.  
-![Diagramme de cas d'utilisation](https://raw.githubusercontent.com/Avasam/Simulateur-ballistic-developpement-de-projet/master/Documentation/Diagramme_de_cas_dutilisation.png)
+![Diagramme de cas d'utilisation](Documentation/Diagramme_de_cas_d'utilisation.png)
 #### Classes
-![Diagramme de classes](https://raw.githubusercontent.com/Avasam/Simulateur-ballistic-developpement-de-projet/master/Documentation/Diagramme_de_classes.png)
+![Diagramme de classes](Documentation/Diagramme_de_classes.png)
