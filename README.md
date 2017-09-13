@@ -1,38 +1,20 @@
-420-AW6 - Développement de projets
+# Simulateur ballistique
+Projet de session en 420-AW6 - Développement de projets  
+par Nicolas Bazinet, Marc-Antoine Barabé, Samuel Therrien et Simon Nguyen  
 
-projet de session - application de tests ballistiques
+## Vision et étude de faisabilité
+La vision du projet consiste en une application pour simuler des tirs sous différentes paramètres affectant le tir. L’utilisateur, mis en charge de la simulation, pourra modifier ces paramètres à son choix à partir de l’interface d’utilisateur constitué d’un menu dynamique.  
 
-par Nicolas Bazinet, Marc-Antoine Barabé, Samuel Therrien et Simon Nguyen
+Le projet sera réalisé à l'aide de Unity version 5.6.x qui est reconnu pour son moteur de physique intégré, dynamique et polyvalent. Le déploiement se fera sur Windows 10 et Mac OS 10.13 (High Sierra).
 
-Le projet consiste à créer une application pour effectuer des tests ballistiques
-et de trajectoire de projectiles avec diffeérente variables et paramètres. Le projet
-sera réalisé en C# à l'aide du moteur de jeu/physique unity.
+Cycle de développement: [Rapport d'analyse (GDoc)](https://docs.google.com/document/d/1KkV5PzfKP5J1mMFA_SUoL8Q6cWs6PHw5FupHfbu4PL4/edit?usp=sharing)
 
-L’utilisateur sera placé dans une application de simulation de tirs balistiques 
-et pourra choisir différentes options face à l’environnement tel que la force et 
-l’orientation du vent, la texture du terrain. Il pourra choisir entre différentes 
-options de machines telle que la catapulte, le canon, le trébuchet et la baliste. 
-L’utilisateur pourra déterminer l’angle et la direction du tir pour chaque simulation. 
-Plusieurs types de terrain seront également disponibles. Tous les changements d’options 
-se feront à partir d’un menu et de l’interface utilisateur. 
+## Modèles
+**[Glossaire](Documentation/Glossaire.md)**
+#### Cas d'utilisation
+Dans le cas du programme de tests balistiques, l’acteur principal est l’utilisateur: c’est lui qui décidera des paramètres.  
 
-Acteur du système : L’utilisateur du simulateur.
-
-
-Étape du projet :
-	DOCUMENTATION
-	- Cas d'utilisation
-	- Diagramme d'activité
-	- Esquisse du menu d'accueil du jeu
-	
-
-	CODAGE
-	- Faire le graphisme du terrain
-	- Faire la physique (texture) des différents terrains (terre, gravier, gazon, etc)
-	- Faire le graphisme pour le canon, catapulte, ballistes
-	- Faire la physique pour les tire de canon, catapultre ballistes
-	- Faire la physique pour le vent
-	- Faire le codage pour choisir la direction du vent
-
-![Diagramme de classes](https://raw.githubusercontent.com/Avasam/Simulateur-ballistic-developpement-de-projet/master/Documentation/Diagramme_de_classes.png)
-![usecase](https://raw.githubusercontent.com/Avasam/Simulateur-ballistic-developpement-de-projet/master/Documentation/usecase_ballistique.png)
+Ces paramètres consistent du terrain: terre, eau, sable, roche; De l’engin de siège tel qu’une catapulte, un trébuchet, une baliste et un canon; Du type de projectile: les flèches, les boulets et les chevrotines; De l’angle de tir ainsi que l'élévation de l’arme. Toutes ces options affectent la trajectoire des projectiles. Finalement, une option pour visualiser l’arc de tir est également disponible.  
+![Diagramme de cas d'utilisation](Documentation/Diagramme_de_cas_d'utilisation.png)
+#### Classes
+![Diagramme de classes](Documentation/Diagramme_de_classes.png)
