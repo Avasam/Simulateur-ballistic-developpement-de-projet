@@ -14,6 +14,7 @@ L’utilisateur aurait besoin d’un interface simple, mais très efficace perme
 Unity ne supporte que les langages de programmation JavaScript et C#. Pour des besoins de performance, les scripts seront fait en C#. Le programme ne devrait pas coûter d’argent puisque c’est un projet scolaire.
 
 ## Documentation
-Cycle de développement: [Rapport d'analyse (GDoc)](https://docs.google.com/document/d/1KkV5PzfKP5J1mMFA_SUoL8Q6cWs6PHw5FupHfbu4PL4/edit?usp=sharing)
-**[Modèles](Documentation/Modèles.md)**
-**[Glossaire](Documentation/Glossaire.md)**
+Cycle de développement: [Rapport d'analyse (GDoc)](https://docs.google.com/document/d/1KkV5PzfKP5J1mMFA_SUoL8Q6cWs6PHw5FupHfbu4PL4/edit?usp=sharing)  
+**[Glossaire](Documentation/Glossaire.md)**  
+**[Modèles](Documentation/Modèles.md)**  
+
