@@ -5,7 +5,8 @@ public class TerrainTextureDictionnary : MonoBehaviour {
     public static string[] Textures { get; private set; }
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
+        Resources.LoadAll<PhysicMaterial>("");
         Terrain terrain = Terrain.activeTerrain;
         TerrainData terrainData = terrain.terrainData;
         SplatPrototype[] splatPrototypes = terrainData.splatPrototypes;

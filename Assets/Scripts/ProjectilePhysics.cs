@@ -3,13 +3,35 @@
 [RequireComponent(typeof(SphereCollider))]
 public class ProjectilePhysics : MonoBehaviour {
     public const string defaultMaterialName = "Projectile";
+    [SerializeField] int waterCollidingCount = 0;
     private SphereCollider sphereCollider;
+    private Rigidbody rBody;
 
 	// Use this for initialization
-	void Start () {
-        Resources.LoadAll<PhysicMaterial>("");
+	void Awake () {
         sphereCollider = gameObject.GetComponent<SphereCollider>();
+        rBody = gameObject.GetComponent<Rigidbody>();
     }
+
+
+    private void OnTriggerEnter(Collider trigger) {
+        if (trigger.gameObject.layer == 4) {
+            waterCollidingCount++;
+            rBody.drag = 5;
+        }
+        
+    }
+
+    private void OnTriggerExit(Collider trigger) {
+        if (trigger.gameObject.layer == 4) {
+            waterCollidingCount--;
+            if (waterCollidingCount <= 0) {
+                rBody.drag = 0;
+            }
+        }
+        
+    }
+
 
     private void OnCollisionEnter(Collision collision) {
         AdaptPhysicMaterial(collision);
