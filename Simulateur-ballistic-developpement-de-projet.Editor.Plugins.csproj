@@ -112,6 +112,9 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Assembly-UnityScript">
+      <HintPath>Library\ScriptAssemblies\Assembly-UnityScript.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Simulateur-ballistic-developpement-de-projet.Plugins.csproj">
@@ -146,6 +149,13 @@
     <Compile Include="Assets\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\0000 ats V2 package\ats pathShader Package\Shader\ats Road Path bumped diffuse alphatest.shader" />
+    <None Include="Assets\0000 ats V2 package\ats vertexLitShader Package\Shader\atsv2 vertexlit.shader" />
+    <None Include="Assets\0000 ats V2 package\atsV2 UnityTerrainBump Package\TerrainReplacementAtsV2.shader" />
+    <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\Tree.cginc" />
+    <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorBarkRendertex.shader" />
+    <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorLeavesRendertex.shader" />
+    <None Include="Assets\0000 ats V2 package\atsV2 grassShader Package\atsV2WavingGrass.shader" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
@@ -240,7 +250,6 @@
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
-    <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
     <None Include="Assets\Stykized Vegetation Pack Free\Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
