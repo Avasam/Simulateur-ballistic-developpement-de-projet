@@ -14,6 +14,7 @@ ExportedObj/
 *.svd
 *.pdb
 # Actually keep these, unless they cause problems
+*.Editor.csproj
 # *.csproj
 # *.sln
 
@@ -183,4 +184,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
