@@ -14,8 +14,7 @@ ExportedObj/
 *.svd
 *.pdb
 # Actually keep these, unless they cause problems
-*.Editor.csproj
-# *.csproj
+*.csproj
 # *.sln
 
 # Unity3D generated meta files
