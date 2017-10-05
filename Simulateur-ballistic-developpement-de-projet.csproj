@@ -85,15 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\0000 ats V2 package\atsV2 UnityTerrainBump Package\CustomTerrainScriptAtsV2.cs" />
-    <Compile Include="Assets\Dynamic Color Curves\Scripts\ColorCurvesManager.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\ChevrotineSpawner.cs" />
     <Compile Include="Assets\Scripts\ProjectilePhysics.cs" />
     <Compile Include="Assets\Scripts\TerrainSurface.cs" />
@@ -108,7 +99,7 @@
     <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorBarkRendertex.shader" />
     <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorLeavesRendertex.shader" />
     <None Include="Assets\0000 ats V2 package\atsV2 grassShader Package\atsV2WavingGrass.shader" />
-    <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
+    <None Include="Assets\Prefabs\Stykized Vegetation Pack Free\Readme.txt" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
@@ -202,7 +193,6 @@
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
-    <None Include="Assets\Stykized Vegetation Pack Free\Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
