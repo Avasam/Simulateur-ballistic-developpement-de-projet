@@ -35,6 +35,7 @@ public class WindZonePhysics : MonoBehaviour {
     }
 
     private void BlowOn(Rigidbody projectile) {
-        Debug.LogWarning("Not yet implemented: Blow some wind on " + projectile);
+        float turbulence = Turbulence * UnityEngine.Random.value;
+        projectile.AddForce(transform.forward * (Strength+turbulence) * 10);
     }
 }
