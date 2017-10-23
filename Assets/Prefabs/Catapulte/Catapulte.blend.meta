@@ -11,27 +11,117 @@ ModelImporter:
     100006: Cube_003
     100008: Cube_004
     100010: Cylinder
+    100012: Beam_Back
+    100014: Beam_Front
+    100016: Beam_Left
+    100018: Beam_Right
+    100020: Beam_Top_Left
+    100022: Beam_Top_Rright
+    100024: Bloqueur
+    100026: Coupe
+    100028: Pillar_BL
+    100030: Pillar_BR
+    100032: Pillar_FL
+    100034: Pillar_FR
+    100036: Pivot
+    100038: Planche
+    100040: Wheel_BL
+    100042: Wheel_BR
+    100044: Wheel_FL
+    100046: Wheel_FR
     400000: //RootNode
     400002: Cube
     400004: Cube_001
     400006: Cube_003
     400008: Cube_004
     400010: Cylinder
+    400012: Beam_Back
+    400014: Beam_Front
+    400016: Beam_Left
+    400018: Beam_Right
+    400020: Beam_Top_Left
+    400022: Beam_Top_Rright
+    400024: Bloqueur
+    400026: Coupe
+    400028: Pillar_BL
+    400030: Pillar_BR
+    400032: Pillar_FL
+    400034: Pillar_FR
+    400036: Pivot
+    400038: Planche
+    400040: Wheel_BL
+    400042: Wheel_BR
+    400044: Wheel_FL
+    400046: Wheel_FR
     2300000: Cube
     2300002: Cube_001
     2300004: Cube_003
     2300006: Cube_004
     2300008: Cylinder
+    2300010: Beam_Back
+    2300012: Beam_Front
+    2300014: Beam_Left
+    2300016: Beam_Right
+    2300018: Beam_Top_Left
+    2300020: Beam_Top_Rright
+    2300022: Bloqueur
+    2300024: Coupe
+    2300026: Pillar_BL
+    2300028: Pillar_BR
+    2300030: Pillar_FL
+    2300032: Pillar_FR
+    2300034: Pivot
+    2300036: Planche
+    2300038: Wheel_BL
+    2300040: Wheel_BR
+    2300042: Wheel_FL
+    2300044: Wheel_FR
     3300000: Cube
     3300002: Cube_001
     3300004: Cube_003
     3300006: Cube_004
     3300008: Cylinder
+    3300010: Beam_Back
+    3300012: Beam_Front
+    3300014: Beam_Left
+    3300016: Beam_Right
+    3300018: Beam_Top_Left
+    3300020: Beam_Top_Rright
+    3300022: Bloqueur
+    3300024: Coupe
+    3300026: Pillar_BL
+    3300028: Pillar_BR
+    3300030: Pillar_FL
+    3300032: Pillar_FR
+    3300034: Pivot
+    3300036: Planche
+    3300038: Wheel_BL
+    3300040: Wheel_BR
+    3300042: Wheel_FL
+    3300044: Wheel_FR
     4300000: Cylinder
     4300002: Cube_004
     4300004: Cube_003
     4300006: Cube_001
     4300008: Cube
+    4300010: Planche
+    4300012: Pillar_BR
+    4300014: Pillar_FR
+    4300016: Pillar_FL
+    4300018: Bloqueur
+    4300020: Pillar_BL
+    4300022: Beam_Top_Left
+    4300024: Wheel_BL
+    4300026: Wheel_FR
+    4300028: Wheel_FL
+    4300030: Wheel_BR
+    4300032: Beam_Top_Rright
+    4300034: Beam_Left
+    4300036: Beam_Right
+    4300038: Beam_Front
+    4300040: Beam_Back
+    4300042: Pivot
+    4300044: Coupe
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
@@ -97,7 +187,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

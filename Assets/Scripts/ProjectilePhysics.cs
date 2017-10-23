@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(SphereCollider))]
 public class ProjectilePhysics : MonoBehaviour {
-    public const string defaultMaterialName = "Projectile";
+    public const string defaultMaterialName = "Dirt";
     [SerializeField] int waterCollidingCount = 0;
     private SphereCollider sphereCollider;
     private Rigidbody rBody;

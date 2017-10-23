@@ -4,7 +4,7 @@ using ReadOnlyDrawer;
 [DisallowMultipleComponent]
 public class EnginDeSiege : MonoBehaviour {
     public ProjectilePhysics ammunition;
-    public float puissance;
+    public float puissance = 50f;
     [SerializeField] Vector3 projectileSpawnPosition;
 
     // Use this for initialization
@@ -26,6 +26,7 @@ public class EnginDeSiege : MonoBehaviour {
     private void Recharger() {
         if (ammunition == null) { ChangerProjectile("Boulet"); }
         ProjectilePhysics loadedProjectile = Instantiate(ammunition, transform);
+        Physics.IgnoreCollision(GetComponent<Collider>(), loadedProjectile.GetComponent<Collider>(), true);
     }
 
     public void LancerProjectile() {
