@@ -229,8 +229,13 @@
     <Compile Include="Assets\EnginDeSiegeController.cs" />
     <Compile Include="Assets\Scripts\ChevrotineSpawner.cs" />
     <Compile Include="Assets\Scripts\EnginDeSiege.cs" />
+    <Compile Include="Assets\Scripts\HUD.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\Menu2.cs" />
     <Compile Include="Assets\Scripts\ProjectilePhysics.cs" />
     <Compile Include="Assets\Scripts\ReadOnlyDrawer.cs" />
+    <Compile Include="Assets\Scripts\SliderForceVent.cs" />
+    <Compile Include="Assets\Scripts\SliderValueText.cs" />
     <Compile Include="Assets\Scripts\TerrainSurface.cs" />
     <Compile Include="Assets\Scripts\TerrainTextureDictionnary.cs" />
     <Compile Include="Assets\Scripts\Utils.cs" />
