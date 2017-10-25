@@ -14,7 +14,7 @@ ExportedObj/
 *.svd
 *.pdb
 # Actually keep these, unless they cause problems
-*.csproj
+# *.csproj
 # *.sln
 
 # Unity3D generated meta files
@@ -183,3 +183,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
