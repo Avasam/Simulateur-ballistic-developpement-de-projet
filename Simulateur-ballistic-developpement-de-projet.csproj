@@ -229,6 +229,7 @@
     <Compile Include="Assets\EnginDeSiegeController.cs" />
     <Compile Include="Assets\Scripts\ChevrotineSpawner.cs" />
     <Compile Include="Assets\Scripts\EnginDeSiege.cs" />
+    <Compile Include="Assets\Scripts\ExposePropertyAttribute.cs" />
     <Compile Include="Assets\Scripts\HUD.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Menu2.cs" />

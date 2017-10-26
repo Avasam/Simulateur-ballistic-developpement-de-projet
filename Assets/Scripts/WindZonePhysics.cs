@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using ReadOnlyDrawer;
-using System;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(WindZone))]
@@ -19,7 +16,7 @@ public class WindZonePhysics : MonoBehaviour {
     public string lookForTag = "Projectile";
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         referedComponent = GetComponent<WindZone>();
     }
 	
