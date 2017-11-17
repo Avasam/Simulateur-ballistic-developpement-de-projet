@@ -9,11 +9,13 @@ public class HUD : MonoBehaviour {
     public Canvas CanvasOptionsJeu;
     public Canvas CanvasHUD;
     public Canvas CanvasAide;
+    public Canvas CanvasChoix;
 
     void Awake()
     {
         CanvasOptionsJeu.enabled = false;
         CanvasAide.enabled = false;
+        CanvasChoix.enabled = false;
     }
 
     public void menu_principal()
@@ -38,6 +40,7 @@ public class HUD : MonoBehaviour {
     {
         CanvasOptionsJeu.enabled = false;
         CanvasAide.enabled = false;
+        CanvasChoix.enabled = false;
         CanvasHUD.enabled = true;
 
     }
@@ -46,6 +49,12 @@ public class HUD : MonoBehaviour {
     {
         CanvasHUD.enabled = false;
         CanvasAide.enabled = true;
+    }
+
+    public void ChoixMenu()
+    {
+        CanvasHUD.enabled = false;
+        CanvasChoix.enabled = true;
     }
 
 }
