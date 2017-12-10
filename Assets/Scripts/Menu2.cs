@@ -13,6 +13,11 @@ public class Menu2 : MonoBehaviour
     public Slider SliderMusique;
     public AudioSource VolumeMusique;
 
+    void Update() {
+        //Rotate dans l'axe des Y
+        transform.Rotate(Vector3.up * Time.deltaTime, Space.World);
+    }
+
     void Awake()
     {
         CanvasOptions.enabled = false;
@@ -48,7 +53,7 @@ public class Menu2 : MonoBehaviour
 
     public void LoadSimul()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void LoadCible()
