@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class HUD : MonoBehaviour {
 
@@ -12,7 +9,7 @@ public class HUD : MonoBehaviour {
     private int starter;
 
 
-    void start() {
+    void Start() {
         Cursor.visible = true;
     }
 
@@ -23,12 +20,12 @@ public class HUD : MonoBehaviour {
 
     }
 
-    public void menu_principal()
+    public void MenuPrincipal()
     {
         SceneManager.LoadScene(0); 
     }
 
-    public void reset()
+    public void Reset()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
@@ -61,16 +58,16 @@ public class HUD : MonoBehaviour {
 
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "UI_Test" || scene.name == "Plaine Italie")
-            Application.LoadLevel(2);
+            SceneManager.LoadScene(2);
         
-        else if (scene.name == "Montagne Lac" ) 
-            Application.LoadLevel(3);
+        else if (scene.name == "Montagne Lac" )
+            SceneManager.LoadScene(3);
         
-        else if (scene.name == "Moyen Orient") 
-            Application.LoadLevel(4);
+        else if (scene.name == "Moyen Orient")
+            SceneManager.LoadScene(4);
         
-        else if (scene.name == "Désert") 
-            Application.LoadLevel(5);
+        else if (scene.name == "Désert")
+            SceneManager.LoadScene(5);
         
     }
 }
