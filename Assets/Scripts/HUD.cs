@@ -51,24 +51,11 @@ public class HUD : MonoBehaviour {
     {
         CanvasHUD.enabled = false;
         CanvasAide.enabled = true;
-        Debug.Log("!!!!!");
     }
 
-    public void ChangeMap() {
+    public void ChangeMap(string nomMap) {
 
-        Scene scene = SceneManager.GetActiveScene();
-        if (scene.name == "UI_Test" || scene.name == "Plaine Italie")
-            SceneManager.LoadScene(2);
-        
-        else if (scene.name == "Montagne Lac" )
-            SceneManager.LoadScene(3);
-        
-        else if (scene.name == "Moyen Orient")
-            SceneManager.LoadScene(4);
-        
-        else if (scene.name == "Désert")
-            SceneManager.LoadScene(5);
-        
+        SceneManager.LoadScene(nomMap); 
     }
 	
 	public void ChoixMenu()
