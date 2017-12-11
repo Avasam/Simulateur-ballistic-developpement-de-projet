@@ -250,6 +250,7 @@
     <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorBarkRendertex.shader" />
     <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorLeavesRendertex.shader" />
     <None Include="Assets\0000 ats V2 package\atsV2 grassShader Package\atsV2WavingGrass.shader" />
+    <None Include="Assets\Mats &amp; Textures\Engins de Siège\License free.txt" />
     <None Include="Assets\Prefabs\Stykized Vegetation Pack Free\Readme.txt" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
