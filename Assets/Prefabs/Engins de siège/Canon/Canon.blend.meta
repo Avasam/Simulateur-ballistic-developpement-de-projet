@@ -13,6 +13,12 @@ ModelImporter:
     100010: Cylinder_004
     100012: Cylinder_005
     100014: Cylinder_006
+    100016: Axis
+    100018: Ball
+    100020: Beam
+    100022: Canon
+    100024: Wheel_Left
+    100026: Wheel_Right
     400000: //RootNode
     400002: Cylinder
     400004: Cylinder_001
@@ -21,6 +27,12 @@ ModelImporter:
     400010: Cylinder_004
     400012: Cylinder_005
     400014: Cylinder_006
+    400016: Axis
+    400018: Ball
+    400020: Beam
+    400022: Canon
+    400024: Wheel_Left
+    400026: Wheel_Right
     2300000: //RootNode
     2300002: Cylinder
     2300004: Cylinder_001
@@ -29,6 +41,12 @@ ModelImporter:
     2300010: Cylinder_004
     2300012: Cylinder_005
     2300014: Cylinder_006
+    2300016: Axis
+    2300018: Ball
+    2300020: Beam
+    2300022: Canon
+    2300024: Wheel_Left
+    2300026: Wheel_Right
     3300000: //RootNode
     3300002: Cylinder
     3300004: Cylinder_001
@@ -37,6 +55,12 @@ ModelImporter:
     3300010: Cylinder_004
     3300012: Cylinder_005
     3300014: Cylinder_006
+    3300016: Axis
+    3300018: Ball
+    3300020: Beam
+    3300022: Canon
+    3300024: Wheel_Left
+    3300026: Wheel_Right
     4300000: Cylinder
     4300002: Cylinder_006
     4300004: Cylinder_005
@@ -44,6 +68,12 @@ ModelImporter:
     4300008: Cylinder_003
     4300010: Cylinder_002
     4300012: Cylinder_001
+    4300014: Ball
+    4300016: Canon
+    4300018: Beam
+    4300020: Wheel_Right
+    4300022: Axis
+    4300024: Wheel_Left
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
@@ -51,9 +81,9 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: unnamed
-    second: {fileID: 2100000, guid: b5c2c0f7fed11a445a68ae505f81253a, type: 2}
+    second: {fileID: 2100000, guid: 055da9795075eb14b8729b4f09f4bd7c, type: 2}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 0
