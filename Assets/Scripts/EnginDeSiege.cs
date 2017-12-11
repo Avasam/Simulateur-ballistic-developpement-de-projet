@@ -8,32 +8,37 @@ public class EnginDeSiege : MonoBehaviour {
     public ProjectilePhysics ammunition;
     public float puissance = 50f;
     [SerializeField] Vector3 projectileSpawnPosition;
+    [SerializeField] Vector3 projectileSpawnRotation;
 
     // Use this for initialization
     void Awake() {
-        if (colliderForProjectileToIgnore != null) {
-            controller = GetComponent<EnginDeSiegeController>();
-            Recharger();
+        if (ammunition != null) {
+            if (colliderForProjectileToIgnore != null) {
+
+                controller = GetComponent<EnginDeSiegeController>();
+                Recharger();
+
+            } else {
+                Debug.LogError("\"" + name + "\"'s " + GetType().Name + ".colliderForProjectileToIgnore attribute cannot be null.");
+            }
         } else {
-            Debug.LogError("\""+name+"\"'s colliderForProjectileToIgnore attribute cannot be null.");
+            Debug.LogError("\"" + name + "\"'s " + GetType().Name + ".ammunition attribute cannot be null.");
         }
     }
 
     // Useful as UI can't directly edit the ammunition used
-    public void ChangerProjectile(string projectileName) {
-        ammunition = ((GameObject)Resources.Load(projectileName)).GetComponent<ProjectilePhysics>();
-        if (ammunition != null) {
-            ammunition.GetComponent<Rigidbody>().isKinematic = true;
-            ammunition.transform.position = projectileSpawnPosition;
-        } else {
-            Debug.LogError("Projectile named " + projectileName + " not found. Please make sure the Projectile is in a \"Resources\" folder.");
-        }
+    public void ChangerProjectile(ProjectilePhysics projectile) {
+        ammunition = projectile.GetComponent<ProjectilePhysics>();
     }
 
     private void Recharger() {
-        if (ammunition == null) { ChangerProjectile("Boulet"); }
         ProjectilePhysics loadedProjectile = Instantiate(ammunition, transform);
-        Physics.IgnoreCollision(colliderForProjectileToIgnore, loadedProjectile.GetComponent<Collider>(), true);
+        loadedProjectile.transform.localPosition = projectileSpawnPosition;
+        loadedProjectile.transform.localRotation = Quaternion.Euler(projectileSpawnRotation);
+        loadedProjectile.GetComponent<Rigidbody>().isKinematic = true;
+        foreach (Collider collider in loadedProjectile.GetComponentsInChildren<Collider>()) {
+            Physics.IgnoreCollision(colliderForProjectileToIgnore, collider, true);
+        }
     }
 
     public void LancerProjectile() {
@@ -46,7 +51,11 @@ public class EnginDeSiege : MonoBehaviour {
                 // If so, launch it!
                 loadedProjectile.isKinematic = false;
                 loadedProjectile.velocity = transform.forward * puissance;
+            } else {
+                Debug.Log("Il n'y a aucun projectile à tirer.");
             }
+        } else {
+            Debug.Log("Un engin de siège ne peut pas tirer en mode déplacement.");
         }
     }
 }

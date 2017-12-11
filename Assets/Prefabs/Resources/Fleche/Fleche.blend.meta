@@ -11,27 +11,52 @@ ModelImporter:
     100006: Cube_002
     100008: Cylinder
     100010: //RootNode
+    100012: Corp
+    100014: Plume_1
+    100016: Plume_2
+    100018: Plume_3
+    100020: Tete
     400000: Cone
     400002: Cube
     400004: Cube_001
     400006: Cube_002
     400008: Cylinder
     400010: //RootNode
+    400012: Corp
+    400014: Plume_1
+    400016: Plume_2
+    400018: Plume_3
+    400020: Tete
     2300000: Cone
     2300002: Cube
     2300004: Cube_001
     2300006: Cube_002
     2300008: Cylinder
+    2300010: Corp
+    2300012: Plume_1
+    2300014: Plume_2
+    2300016: Plume_3
+    2300018: Tete
     3300000: Cone
     3300002: Cube
     3300004: Cube_001
     3300006: Cube_002
     3300008: Cylinder
+    3300010: Corp
+    3300012: Plume_1
+    3300014: Plume_2
+    3300016: Plume_3
+    3300018: Tete
     4300000: Cube_002
     4300002: Cube_001
     4300004: Cube
     4300006: Cone
     4300008: Cylinder
+    4300010: Plume_3
+    4300012: Plume_2
+    4300014: Plume_1
+    4300016: Tete
+    4300018: Corp
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
@@ -69,7 +94,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 1.2
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -92,7 +117,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

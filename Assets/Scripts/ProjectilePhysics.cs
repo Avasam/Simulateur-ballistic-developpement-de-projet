@@ -1,23 +1,26 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(SphereCollider))]
+[RequireComponent(typeof(Rigidbody))]
 public class ProjectilePhysics : MonoBehaviour {
     public const string defaultMaterialName = "Dirt";
     [SerializeField] int waterCollidingCount = 0;
-    private SphereCollider sphereCollider;
+    [SerializeField] Collider dynamicCollider;
     private Rigidbody rBody;
-    private int layerID;
+    private int waterLayerID;
 
 	// Use this for initialization
 	void Awake () {
-        sphereCollider = gameObject.GetComponent<SphereCollider>();
-        rBody = gameObject.GetComponent<Rigidbody>();
-        layerID = LayerMask.NameToLayer("Water");
+        if (dynamicCollider != null) {
+            rBody = gameObject.GetComponent<Rigidbody>();
+            waterLayerID = LayerMask.NameToLayer("Water");
+        } else {
+            Debug.LogError("\"" + name + "\"'s "+ GetType().Name + ".dynamicCollider attribute cannot be null.");
+        }
     }
 
 
     private void OnTriggerEnter(Collider trigger) {
-        if (trigger.gameObject.layer == layerID) {
+        if (trigger.gameObject.layer == waterLayerID) {
             waterCollidingCount++;
             rBody.drag = 5;
         }
@@ -25,7 +28,7 @@ public class ProjectilePhysics : MonoBehaviour {
     }
 
     private void OnTriggerExit(Collider trigger) {
-        if (trigger.gameObject.layer == layerID) {
+        if (trigger.gameObject.layer == waterLayerID) {
             waterCollidingCount--;
             if (waterCollidingCount <= 0) {
                 rBody.drag = 0;
@@ -55,14 +58,14 @@ public class ProjectilePhysics : MonoBehaviour {
                     string physicMatName = textureName.Substring(0, 4);
                     PhysicMaterial physicMat = (PhysicMaterial)Resources.Load(physicMatName);
                     if (physicMat != null) {
-                        sphereCollider.material = physicMat;
+                        this.dynamicCollider.material = physicMat;
 
               // Dealing with problems
                     } else {
                         Debug.LogWarning("Can't find Physic Material called \"" + physicMatName + "\" for Texture \"" + textureName + "\". Default Material \"" + defaultMaterialName + "\" used instead.");
                         physicMat = (PhysicMaterial)Resources.Load(defaultMaterialName);
                         if (physicMat != null) {
-                            sphereCollider.material = sphereCollider.material;
+                            this.dynamicCollider.material = this.dynamicCollider.material;
                         } else {
                             Debug.LogError("Default Material \"" + defaultMaterialName + "\" not found. Please make sure the required Physic Materials are in a \"Resources\" folder.");
                         }

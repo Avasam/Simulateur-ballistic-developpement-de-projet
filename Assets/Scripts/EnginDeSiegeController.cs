@@ -10,10 +10,12 @@ public class EnginDeSiegeController : MonoBehaviour {
     [ExposeProperty] public bool ModeDeplacement {
         get { return modeDeplacement; }
         set {
-            if (value) {
+            if (value) { // Mode déplacement
                 rigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-            } else {
+                rigidBody.useGravity = false;
+            } else { // Mode Tir
                 rigidBody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+                rigidBody.useGravity = true;
             }
             modeDeplacement = value;
         }
@@ -35,8 +37,8 @@ public class EnginDeSiegeController : MonoBehaviour {
                 rigidBody.velocity = movement * vitesse;
             // This is the mode used to adjust and shoot
             } else {
-                Vector3 rotation = new Vector3(0f, Input.GetAxis("Horizontal"), 0f);
-                rigidBody.angularVelocity = rotation * vitesse / 50;
+                Vector3 rotation = new Vector3(Input.GetAxis("Longitudinal"), Input.GetAxis("Horizontal"), 0f);
+                rigidBody.MoveRotation(rigidBody.rotation * Quaternion.Euler(rotation * vitesse / 50));
             }
         }
     }

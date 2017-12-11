@@ -29,6 +29,31 @@ ModelImporter:
     100042: Cylinder_005
     100044: Cylinder_006
     100046: Cylinder_007
+    100048: Edge_Back
+    100050: Edge_Left
+    100052: Edge_Right
+    100054: Foot_Back
+    100056: Handle_Stick_Back
+    100058: Handle_Stick_Front
+    100060: Hnadle_Stick_Bottom
+    100062: Hnadle_Stick_UP
+    100064: Lower_Beam
+    100066: Pillar_Back
+    100068: Pillar_Front
+    100070: Plank_Down
+    100072: Plank_Left
+    100074: Plank_Right
+    100076: Plank_Up
+    100078: Upper_Beam
+    100080: Arm_Left
+    100082: Arm_Right
+    100084: Foot_Front
+    100086: Handle_Stick_Bottom
+    100088: Handle_Stick_UP
+    100090: Arm_Pivot_Left
+    100092: Arm_Pivot_Right
+    100094: Handle_Pivot
+    100096: Handle_Wheel
     400000: //RootNode
     400002: BezierCurve_000
     400004: BezierCurve_001
@@ -53,6 +78,31 @@ ModelImporter:
     400042: Cylinder_005
     400044: Cylinder_006
     400046: Cylinder_007
+    400048: Edge_Back
+    400050: Edge_Left
+    400052: Edge_Right
+    400054: Foot_Back
+    400056: Handle_Stick_Back
+    400058: Handle_Stick_Front
+    400060: Hnadle_Stick_Bottom
+    400062: Hnadle_Stick_UP
+    400064: Lower_Beam
+    400066: Pillar_Back
+    400068: Pillar_Front
+    400070: Plank_Down
+    400072: Plank_Left
+    400074: Plank_Right
+    400076: Plank_Up
+    400078: Upper_Beam
+    400080: Arm_Left
+    400082: Arm_Right
+    400084: Foot_Front
+    400086: Handle_Stick_Bottom
+    400088: Handle_Stick_UP
+    400090: Arm_Pivot_Left
+    400092: Arm_Pivot_Right
+    400094: Handle_Pivot
+    400096: Handle_Wheel
     2300000: BezierCurve_000
     2300002: BezierCurve_001
     2300004: Cube
@@ -76,6 +126,31 @@ ModelImporter:
     2300040: Cylinder_005
     2300042: Cylinder_006
     2300044: Cylinder_007
+    2300046: Edge_Back
+    2300048: Edge_Left
+    2300050: Edge_Right
+    2300052: Foot_Back
+    2300054: Handle_Stick_Back
+    2300056: Handle_Stick_Front
+    2300058: Hnadle_Stick_Bottom
+    2300060: Hnadle_Stick_UP
+    2300062: Lower_Beam
+    2300064: Pillar_Back
+    2300066: Pillar_Front
+    2300068: Plank_Down
+    2300070: Plank_Left
+    2300072: Plank_Right
+    2300074: Plank_Up
+    2300076: Upper_Beam
+    2300078: Arm_Left
+    2300080: Arm_Right
+    2300082: Foot_Front
+    2300084: Handle_Stick_Bottom
+    2300086: Handle_Stick_UP
+    2300088: Arm_Pivot_Left
+    2300090: Arm_Pivot_Right
+    2300092: Handle_Pivot
+    2300094: Handle_Wheel
     3300000: BezierCurve_000
     3300002: BezierCurve_001
     3300004: Cube
@@ -99,6 +174,31 @@ ModelImporter:
     3300040: Cylinder_005
     3300042: Cylinder_006
     3300044: Cylinder_007
+    3300046: Edge_Back
+    3300048: Edge_Left
+    3300050: Edge_Right
+    3300052: Foot_Back
+    3300054: Handle_Stick_Back
+    3300056: Handle_Stick_Front
+    3300058: Hnadle_Stick_Bottom
+    3300060: Hnadle_Stick_UP
+    3300062: Lower_Beam
+    3300064: Pillar_Back
+    3300066: Pillar_Front
+    3300068: Plank_Down
+    3300070: Plank_Left
+    3300072: Plank_Right
+    3300074: Plank_Up
+    3300076: Upper_Beam
+    3300078: Arm_Left
+    3300080: Arm_Right
+    3300082: Foot_Front
+    3300084: Handle_Stick_Bottom
+    3300086: Handle_Stick_UP
+    3300088: Arm_Pivot_Left
+    3300090: Arm_Pivot_Right
+    3300092: Handle_Pivot
+    3300094: Handle_Wheel
     4300000: BezierCurve_001
     4300002: Cylinder_007
     4300004: Cylinder_006
@@ -122,6 +222,31 @@ ModelImporter:
     4300040: Cube_002
     4300042: Cube_001
     4300044: Cube
+    4300046: Plank_Up
+    4300048: Plank_Left
+    4300050: Plank_Right
+    4300052: Edge_Back
+    4300054: Edge_Right
+    4300056: Edge_Left
+    4300058: Handle_Stick_Front
+    4300060: Handle_Stick_Back
+    4300062: Hnadle_Stick_Bottom
+    4300064: Hnadle_Stick_UP
+    4300066: Pillar_Back
+    4300068: Upper_Beam
+    4300070: Plank_Down
+    4300072: Pillar_Front
+    4300074: Foot_Back
+    4300076: Lower_Beam
+    4300078: Arm_Right
+    4300080: Arm_Left
+    4300082: Handle_Stick_Bottom
+    4300084: Handle_Stick_UP
+    4300086: Foot_Front
+    4300088: Arm_Pivot_Left
+    4300090: Arm_Pivot_Right
+    4300092: Handle_Pivot
+    4300094: Handle_Wheel
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
@@ -159,7 +284,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 1.5
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -182,7 +307,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
