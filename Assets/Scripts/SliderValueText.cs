@@ -13,18 +13,19 @@ public class SliderValueText : MonoBehaviour
     private GameObject myObject;
     private float rotation;
     private Text tmproText;
+    public Slider slider;
 
     private void Start()
     {
         tmproText = GetComponent<Text>();
         myObject = GameObject.Find("boussole");
-        GetComponentInParent<Slider>().onValueChanged.AddListener(HandleValueChanged);
+        slider.onValueChanged.AddListener(HandleValueChanged);
     }
 
     private void HandleValueChanged(float value)
     {
         tmproText.text = string.Format(formatText, value);
-        rotation = GameObject.Find("Slider").GetComponent<Slider>().value;
+        rotation = slider.value;
         myObject.transform.localEulerAngles = new Vector3(0, 0, -rotation);
     }
 }

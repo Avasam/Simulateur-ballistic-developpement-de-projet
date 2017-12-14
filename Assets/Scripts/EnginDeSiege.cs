@@ -1,24 +1,43 @@
 ﻿using UnityEngine;
 
 [DisallowMultipleComponent]
-[RequireComponent(typeof(EnginDeSiegeController))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody))]
 public class EnginDeSiege : MonoBehaviour {
-    EnginDeSiegeController controller;
+    Rigidbody rigidBody;
+    public Rigidbody RigidBody {
+        get { return rigidBody; }
+        set { rigidBody = value; }
+    }
     Animator animator;
     [SerializeField] GameObject childContainingProjectile;
     public ProjectilePhysics ammunition;
     public float puissance = 50f;
     [SerializeField] Vector3 projectileSpawnPosition;
     [SerializeField] Vector3 projectileSpawnRotation;
+    [HideInInspector, SerializeField] private bool modeDeplacement = true;
+    [ExposeProperty]
+    public bool ModeDeplacement {
+        get { return modeDeplacement; }
+        set {
+            if (value) { // Mode déplacement
+                rigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+                rigidBody.useGravity = false;
+            } else { // Mode Tir
+                rigidBody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+                rigidBody.useGravity = true;
+            }
+            modeDeplacement = value;
+        }
+    }
 
     // Use this for initialization
     void Awake() {
         if (ammunition != null) {
             if (childContainingProjectile != null) {
 
+                rigidBody = GetComponent<Rigidbody>();
                 animator = GetComponent<Animator>();
-                controller = GetComponent<EnginDeSiegeController>();
                 Recharger();
 
             } else {
@@ -45,10 +64,10 @@ public class EnginDeSiege : MonoBehaviour {
 
     public void Tirer() {
         // First, check if the engin is in the right mode
-        if (!controller.ModeDeplacement) {
+        if (!animator.GetBool("Tirer")) {
             animator.SetBool("Tirer", true);
         } else {
-            Debug.Log("Un engin de siège ne peut pas tirer en mode déplacement.");
+            Debug.Log("L'animation n'est pas dans le bon état.");
         }
     }
 

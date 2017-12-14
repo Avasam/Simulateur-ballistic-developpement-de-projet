@@ -4,6 +4,10 @@ using ReadOnlyDrawer;
 [DisallowMultipleComponent]
 [RequireComponent(typeof(WindZone))]
 public class WindZonePhysics : MonoBehaviour {
+    public float Direction {
+        get { return transform.rotation.y;  }
+        set { transform.rotation = Quaternion.Euler(0f, value, 0f);  }
+    }
     [ReadOnly] public WindZone referedComponent;
     public float Strength {
         get { return referedComponent.windMain; }

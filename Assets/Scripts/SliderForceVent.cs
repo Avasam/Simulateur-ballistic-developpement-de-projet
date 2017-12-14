@@ -11,11 +11,13 @@ public class SliderForceVent : MonoBehaviour {
 
     private Text txtForce;
 
+    public Slider slider;
+
     private void Start()
     {
         txtForce = GetComponent<Text>();
 
-        GetComponentInParent<Slider>().onValueChanged.AddListener(HandleValueChanged);
+        slider.onValueChanged.AddListener(HandleValueChanged);
     }
 
     private void HandleValueChanged(float value)
