@@ -13,13 +13,17 @@ public class SliderValueText : MonoBehaviour
     private GameObject myObject;
     private float rotation;
     private Text tmproText;
-    public Slider slider;
+    private Slider slider;
 
-    private void Start()
-    {
-        tmproText = GetComponent<Text>();
-        myObject = GameObject.Find("boussole");
-        slider.onValueChanged.AddListener(HandleValueChanged);
+    private void Start() {
+        slider = GetComponentInParent<Slider>();
+        if (slider != null) {
+            tmproText = GetComponent<Text>();
+            myObject = GameObject.Find("boussole");
+            slider.onValueChanged.AddListener(HandleValueChanged);
+        } else {
+            Debug.LogError("SliderValueText n'a pas de Slider dans ses parents.");
+        }
     }
 
     private void HandleValueChanged(float value)

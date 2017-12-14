@@ -10,17 +10,18 @@ public class WindZonePhysics : MonoBehaviour {
     }
     [ReadOnly] public WindZone referedComponent;
     public float Strength {
-        get { return referedComponent.windMain; }
-        set { referedComponent.windMain = value; }
+        get { return referedComponent.windMain / windAdjustment; }
+        set { referedComponent.windMain = value / windAdjustment; }
     }
     public float Turbulence {
         get { return referedComponent.windTurbulence; }
         set { referedComponent.windTurbulence = value; }
     }
     public string lookForTag = "Projectile";
+    [SerializeField] int windAdjustment = 15;
 
-	// Use this for initialization
-	void Awake () {
+    // Use this for initialization
+    void Awake () {
         referedComponent = GetComponent<WindZone>();
     }
 	
@@ -37,6 +38,6 @@ public class WindZonePhysics : MonoBehaviour {
 
     private void BlowOn(Rigidbody projectile) {
         float turbulence = Turbulence * UnityEngine.Random.value;
-        projectile.AddForce(transform.forward * (Strength+turbulence) * 10);
+        projectile.AddForce(transform.forward * turbulence * Strength * Mathf.Pow(windAdjustment,2.5f));
     }
 }
