@@ -15,21 +15,6 @@ public class EnginDeSiege : MonoBehaviour {
     public float puissance = 50f;
     [SerializeField] Vector3 projectileSpawnPosition;
     [SerializeField] Vector3 projectileSpawnRotation;
-    [HideInInspector, SerializeField] private bool modeDeplacement = true;
-    [ExposeProperty]
-    public bool ModeDeplacement {
-        get { return modeDeplacement; }
-        set {
-            if (value) { // Mode déplacement
-                rigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-                rigidBody.useGravity = false;
-            } else { // Mode Tir
-                rigidBody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
-                rigidBody.useGravity = true;
-            }
-            modeDeplacement = value;
-        }
-    }
 
     // Use this for initialization
     void Awake() {
