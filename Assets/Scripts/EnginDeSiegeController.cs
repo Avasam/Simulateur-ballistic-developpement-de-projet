@@ -8,6 +8,9 @@ public class EnginDeSiegeController : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+        if (enginDeSiege == null) {
+            GetComponent<HUD>().ChangerEngin("Canon");
+        }
         enginDeSiege.RigidBody = enginDeSiege.GetComponent<Rigidbody>();
     }
 

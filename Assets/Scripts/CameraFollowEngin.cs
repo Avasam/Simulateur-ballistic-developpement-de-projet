@@ -10,8 +10,8 @@ public class CameraFollowEngin : MonoBehaviour {
         set { zoom = value; }
     }
     public const float maxZoomOut = 8;
-    public Vector2 angle = new Vector2(45f, 0);
-    public float zoomOut = 30f;
+    public Vector2 angle = new Vector2(40f, 0);
+    public float zoomOut = 70f;
 
     private Camera myCamera;
 
