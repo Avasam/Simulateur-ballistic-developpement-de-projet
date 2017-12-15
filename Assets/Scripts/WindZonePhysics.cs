@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using ReadOnlyDrawer;
+//Must comment out for build
+//using ReadOnlyDrawer;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(WindZone))]
@@ -8,7 +9,9 @@ public class WindZonePhysics : MonoBehaviour {
         get { return transform.rotation.y;  }
         set { transform.rotation = Quaternion.Euler(0f, value, 0f);  }
     }
-    [ReadOnly] public WindZone referedComponent;
+    //Must comment out for build
+    //[ReadOnly]
+    public WindZone referedComponent;
     public float Strength {
         get { return referedComponent.windMain / windAdjustment; }
         set { referedComponent.windMain = value / windAdjustment; }

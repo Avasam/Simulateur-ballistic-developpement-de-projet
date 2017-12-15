@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//Must move rom Scripts to Editor for build
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
