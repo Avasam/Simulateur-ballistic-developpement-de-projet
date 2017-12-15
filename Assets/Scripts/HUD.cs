@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(EnginDeSiegeController))]
 public class HUD : MonoBehaviour {
 
     public Canvas CanvasOptionsJeu;
     public Canvas CanvasHUD;
     public Canvas CanvasAide;
-	public Canvas CanvasChoix;	
+	public Canvas CanvasChoix;
+    EnginDeSiegeController enginDeSiegeController;
 
     void Start() {
         Cursor.visible = true;
@@ -17,6 +19,7 @@ public class HUD : MonoBehaviour {
         CanvasOptionsJeu.enabled = false;
         CanvasAide.enabled = false;
         CanvasChoix.enabled = false;
+        enginDeSiegeController = GetComponent<EnginDeSiegeController>();
     }
 
     public void MenuPrincipal()
@@ -62,6 +65,15 @@ public class HUD : MonoBehaviour {
     {
         CanvasHUD.enabled = false;
         CanvasChoix.enabled = true;
+    }
+
+    public void ChangerEngin(string nomEngin) {
+        EnginDeSiege enginDeSiege = GameObject.Find(nomEngin).GetComponent<EnginDeSiege>();
+        if (enginDeSiege != null) {
+            enginDeSiegeController.enginDeSiege = enginDeSiege;
+        } else {
+            Debug.LogError("Il n'y a pas de " + nomEngin + " dans la scène!");
+        }
     }
 
 }
