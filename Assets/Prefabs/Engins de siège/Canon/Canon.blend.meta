@@ -19,6 +19,7 @@ ModelImporter:
     100022: Canon
     100024: Wheel_Left
     100026: Wheel_Right
+    100028: Tube
     400000: //RootNode
     400002: Cylinder
     400004: Cylinder_001
@@ -33,6 +34,7 @@ ModelImporter:
     400022: Canon
     400024: Wheel_Left
     400026: Wheel_Right
+    400028: Tube
     2300000: //RootNode
     2300002: Cylinder
     2300004: Cylinder_001
@@ -47,6 +49,7 @@ ModelImporter:
     2300022: Canon
     2300024: Wheel_Left
     2300026: Wheel_Right
+    2300028: Tube
     3300000: //RootNode
     3300002: Cylinder
     3300004: Cylinder_001
@@ -61,6 +64,7 @@ ModelImporter:
     3300022: Canon
     3300024: Wheel_Left
     3300026: Wheel_Right
+    3300028: Tube
     4300000: Cylinder
     4300002: Cylinder_006
     4300004: Cylinder_005
@@ -74,6 +78,7 @@ ModelImporter:
     4300020: Wheel_Right
     4300022: Axis
     4300024: Wheel_Left
+    4300026: Tube
     7400000: Default Take
     9500000: //RootNode
   externalObjects:

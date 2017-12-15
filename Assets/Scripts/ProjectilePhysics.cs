@@ -7,10 +7,13 @@ public class ProjectilePhysics : MonoBehaviour {
     [SerializeField] Collider dynamicCollider;
     private Rigidbody rBody;
     private int waterLayerID;
+    private bool noCollisionYet = true;
 
-	// Use this for initialization
-	void Awake () {
+    // Use this for initialization
+    void Awake () {
         if (dynamicCollider != null) {
+            waterCollidingCount = 0;
+            noCollisionYet = true;
             rBody = gameObject.GetComponent<Rigidbody>();
             waterLayerID = LayerMask.NameToLayer("Water");
         } else {
@@ -18,6 +21,27 @@ public class ProjectilePhysics : MonoBehaviour {
         }
     }
 
+    private void Update() {
+        Debug.DrawRay(transform.position, rBody.velocity);
+    }
+
+    private void FixedUpdate() {
+        // Only check if the projectile is moving
+        if (!(rBody.velocity == Vector3.zero || rBody.isKinematic)) {
+            RaycastHit hitInfo = new RaycastHit();
+            bool raycastHit = rBody.SweepTest(rBody.velocity, out hitInfo);
+            if (raycastHit) {
+                AdaptPhysicMaterial(hitInfo);
+            }
+            if (noCollisionYet) {
+                rBody.MoveRotation(Quaternion.Euler(rBody.velocity));
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+        noCollisionYet = false;
+    }
 
     private void OnTriggerEnter(Collider trigger) {
         if (trigger.gameObject.layer == waterLayerID) {
@@ -37,20 +61,11 @@ public class ProjectilePhysics : MonoBehaviour {
         
     }
 
-
-    private void OnCollisionEnter(Collision collision) {
-        AdaptPhysicMaterial(collision);
-    }
-
-    private void OnCollisionStay(Collision collision) {
-        AdaptPhysicMaterial(collision);
-    }
-
-    private void AdaptPhysicMaterial(Collision collision) {
-        if (collision.gameObject.GetComponent<Terrain>()) {
+    private void AdaptPhysicMaterial(RaycastHit hitInfo) {
+        if (hitInfo.collider.GetComponent<Terrain>()) {
             if (TerrainTextureDictionnary.Textures != null) {
                 // Get the texture name
-                int surfaceIndex = TerrainSurface.GetMainTexture(transform.position);
+                int surfaceIndex = TerrainSurface.GetMainTexture(hitInfo.point);
                 string textureName = TerrainTextureDictionnary.Textures[surfaceIndex];
 
                 // Find the appropriate material
@@ -74,7 +89,7 @@ public class ProjectilePhysics : MonoBehaviour {
                     Debug.LogWarning("Texture \"" + textureName + "\"'s name is too short. The start of the name should match a Physic Material in a \"Resources\" folder.");
                 }
             } else {
-                Debug.LogError("TerrainTextureDictionnary.Textures not set. Please make sure the Terrain \"" + collision.gameObject.name + "\" has a TerrainTextureDictionnary Component.");
+                Debug.LogError("TerrainTextureDictionnary.Textures not set. Please make sure the Terrain \"" + hitInfo.collider.name + "\" has a TerrainTextureDictionnary Component.");
             }
         }
     }

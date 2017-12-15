@@ -68,11 +68,16 @@ public class HUD : MonoBehaviour {
     }
 
     public void ChangerEngin(string nomEngin) {
-        EnginDeSiege enginDeSiege = GameObject.Find(nomEngin).GetComponent<EnginDeSiege>();
-        if (enginDeSiege != null) {
-            enginDeSiegeController.enginDeSiege = enginDeSiege;
+        GameObject gameObject = GameObject.Find(nomEngin);
+        if (gameObject != null) {
+            EnginDeSiege enginDeSiege = gameObject.GetComponent<EnginDeSiege>();
+            if (enginDeSiege != null) {
+                enginDeSiegeController.enginDeSiege = enginDeSiege;
+            } else {
+                Debug.LogError("Ce " + nomEngin + " n'a pas de composant EnginDeSiege.");
+            }
         } else {
-            Debug.LogError("Il n'y a pas de " + nomEngin + " dans la scène!");
+            Debug.LogError("Il n'y a pas de \"" + nomEngin + "\" dans la scène!");
         }
     }
 
