@@ -39,7 +39,8 @@ public class CameraFollowEngin : MonoBehaviour {
 
         if (enginDeSiegeController.enginDeSiege) {
             Vector3 newRotation = enginDeSiegeController.enginDeSiege.transform.rotation.eulerAngles;
-            newRotation = angle;
+            Vector3 angle3 = angle;
+            newRotation += angle3;
             transform.rotation = Quaternion.Euler(newRotation);
 
             // Reset the local position before using the angle to move away
