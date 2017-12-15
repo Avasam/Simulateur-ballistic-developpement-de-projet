@@ -32,6 +32,7 @@ sysinfo.txt
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
+/ProjectSettings/EditorBuildSettings.asset
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
