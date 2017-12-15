@@ -10,7 +10,7 @@ public class CameraFollowEngin : MonoBehaviour {
         set { zoom = value; }
     }
     public const float maxZoomOut = 8;
-    public float angle = 45f;
+    public Vector2 angle = new Vector2(45f, 0);
     public float zoomOut = 30f;
 
     private Camera myCamera;
@@ -28,6 +28,8 @@ public class CameraFollowEngin : MonoBehaviour {
 
     // Update is called once per frame
     private void Update() {
+        angle += new Vector2(Input.GetAxis("OrbitVertical"), Input.GetAxis("OrbitHorizontal"));
+        zoomOut += Input.GetAxis("Mouse ScrollWheel");
         CameraUpdate();
     }
 
@@ -37,7 +39,7 @@ public class CameraFollowEngin : MonoBehaviour {
 
         if (enginDeSiegeController.enginDeSiege) {
             Vector3 newRotation = enginDeSiegeController.enginDeSiege.transform.rotation.eulerAngles;
-            newRotation.x = angle;
+            newRotation = angle;
             transform.rotation = Quaternion.Euler(newRotation);
 
             // Reset the local position before using the angle to move away
