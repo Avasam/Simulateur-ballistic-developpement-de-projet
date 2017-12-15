@@ -7,7 +7,7 @@ public class ProjectilePhysics : MonoBehaviour {
     [SerializeField] Collider dynamicCollider;
     private Rigidbody rBody;
     private int waterLayerID;
-    private bool noCollisionYet = true;
+    [SerializeField] bool noCollisionYet = true;
 
     // Use this for initialization
     void Awake () {
@@ -27,14 +27,14 @@ public class ProjectilePhysics : MonoBehaviour {
 
     private void FixedUpdate() {
         // Only check if the projectile is moving
-        if (!(rBody.velocity == Vector3.zero || rBody.isKinematic)) {
+        if (rBody.velocity.magnitude > 0.1 && !rBody.isKinematic) {
             RaycastHit hitInfo = new RaycastHit();
             bool raycastHit = rBody.SweepTest(rBody.velocity, out hitInfo);
             if (raycastHit) {
                 AdaptPhysicMaterial(hitInfo);
             }
             if (noCollisionYet) {
-                rBody.MoveRotation(Quaternion.Euler(rBody.velocity));
+                rBody.MoveRotation(Quaternion.LookRotation(rBody.velocity, Vector3.up));
             }
         }
     }
